@@ -38,7 +38,7 @@ const texture6 = textureLoader.load("textures/6.jpg");
 const texture12 = textureLoader.load("textures/12.jpg");
 // const texture13 = textureLoader.load("textures/13.jpg");
 
-const aplhaTexture = textureLoader.load("textures/alpha/1.png");
+const aplhaTexture = textureLoader.load("textures/alpha/tileAlpha.png");
 
 // Canvas
 const canvas = document.querySelector("canvas.three");
