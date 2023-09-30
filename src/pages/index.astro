@@ -1,16 +1,10 @@
 ---
-
+import HomeLayout from "../Layouts/DefaultLayout.astro";
+import TitleSection from "../components/TitleSection/titleSection.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<HomeLayout>
+  <div class="section-wrapper">
+    <TitleSection />
+  </div>
+</HomeLayout>
