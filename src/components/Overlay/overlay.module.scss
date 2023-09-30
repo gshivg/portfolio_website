@@ -1,0 +1,126 @@
+.overlay {
+  position: fixed;
+  z-index: 1;
+
+  width: 98%;
+  height: 98%;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 20px;
+  border: 1px solid #ffffffa4;
+
+  .nav {
+    /* background-color: rgba(0, 255, 255, 0.572); */
+    top: 0;
+    height: 50px;
+    border-bottom: 1px solid #ffffffa4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 30%;
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        display: inline;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-size: small;
+    color: #ffffffa4;
+  }
+
+  .center {
+    margin-top: -52px;
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+
+    .left {
+      /* background-color: rgba(0, 255, 255, 0.283); */
+      box-sizing: border-box;
+      /* position: relative; */
+      top: -50px;
+
+      height: 100%;
+      width: 52px;
+
+      border-right: 1px solid #ffffffa4;
+      display: flex;
+      justify-content: center;
+
+      p {
+      }
+
+      div {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        p {
+          /* background-color: red; */
+          transform: rotate(-90deg);
+          color: #ffffffa4;
+
+          a {
+            font-size: medium;
+          }
+        }
+      }
+    }
+
+    .right {
+      /* background-color: cyan; */
+      box-sizing: border-box;
+      /* position: relative; */
+      top: -50px;
+      right: 52px;
+
+      height: 100%;
+      width: 52px;
+
+      border-left: 1px solid #ffffffa4;
+
+      display: flex;
+      justify-content: center;
+
+      .right-overlay {
+        z-index: -1;
+        background-color: rgba(128, 0, 128, 0.49);
+        border-radius: 0 20px 20px 0;
+        width: 52px;
+        /* height: 100%; */
+      }
+
+      div {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        p {
+          /* background-color: red; */
+          transform: rotate(90deg);
+          color: #ffffffa4;
+
+          a {
+            font-size: medium;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../scss/section.module.scss";
+
+.myself-section {
+  display: inline-flex;
+  padding: 146px 770px 256px 129px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+
+  .description {
+    text-transform: none;
+    color: #fff;
+    padding-left: 0;
+  }
+}

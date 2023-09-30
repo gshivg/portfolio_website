@@ -1,0 +1,28 @@
+@font-face {
+  font-family: Comfortaa;
+  font-weight: 200;
+  src: local("/fonts/Comfortaa.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', cursive;
+}
+
+html {
+  background: #1e1a20;
+  scroll-behavior: smooth;
+  /* overscroll-behavior: contain; */
+  overflow-x: hidden;
+
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
