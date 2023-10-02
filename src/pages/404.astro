@@ -1,0 +1,43 @@
+---
+import DefaultLayout from "../Layouts/DefaultLayout.astro";
+---
+
+<DefaultLayout title="404">
+  <section>
+    <div class="wrapper404">
+      <div class="giant-text shadow">404</div>
+      <div class="subtitle shadow">
+        <div>Page not found!</div>
+        <div>Don't know what you are looking for?</div>
+        <div><a href="/">Click here</a> to go to homepage.</div>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss">
+  @import "../scss/section.module.scss";
+
+  .wrapper404 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    .giant-text {
+      font-size: 20rem;
+      font-weight: 900;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+</style>
