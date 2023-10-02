@@ -1,13 +1,13 @@
 ---
 import { Icon } from "astro-icon";
 
-const { icon, title } = Astro.props;
+const { icon, title, redirect } = Astro.props;
 ---
 
-<button class="btn">
+<a class="btn" href={redirect} target="_blank">
   <Icon name={icon} />
   <span class="title">{title}</span>
-</button>
+</a>
 
 <style lang="scss">
   @import "./button.module.scss";
