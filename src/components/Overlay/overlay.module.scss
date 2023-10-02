@@ -1,6 +1,6 @@
 .overlay {
   position: fixed;
-  // z-index: 1;
+  z-index: 1;
 
   width: 98%;
   height: 98%;
@@ -34,6 +34,7 @@
 
       li {
         display: inline;
+        direction: rtl;
       }
     }
   }
