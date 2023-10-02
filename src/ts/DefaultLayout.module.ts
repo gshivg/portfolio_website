@@ -1,4 +1,4 @@
-import windowsSizeChecker from '../ts/windowSizeChecker';
+import windowsSizeChecker from './windowSizeChecker';
 
 console.log('DefaultLayout.module.ts');
 
