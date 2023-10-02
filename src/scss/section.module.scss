@@ -21,6 +21,8 @@ section {
   }
 
   .subtitle {
+    @extend .shadow;
+
     font-size: 3vmin;
     text-transform: none;
     font-family: "Comfortaa";
