@@ -1,9 +1,6 @@
 ---
 const { title } = Astro.props;
 
-// Import global styles
-import "../scss/global.module.scss";
-
 // Import components
 import MetaData from "./../components/MetaData.astro";
 import Overlay from "../components/Overlay/overlay.astro";
@@ -25,6 +22,6 @@ import Overlay from "../components/Overlay/overlay.astro";
   </body>
 
   <style lang="scss">
-    @import "./SimpleLayout.module.scss";
+    @import "./../scss/global.module.scss";
   </style>
 </html>

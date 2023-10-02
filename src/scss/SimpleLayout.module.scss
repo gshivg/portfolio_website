@@ -1,5 +1,9 @@
+@import "./global.module.scss";
+
 body {
   background-image: url('/textures/4.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
