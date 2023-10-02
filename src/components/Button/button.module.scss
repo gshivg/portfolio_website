@@ -20,6 +20,11 @@
   display: flex;
   justify-content: center;
 
+  @media screen and (max-width: 768px) {
+    text-align: start;
+    justify-content: space-evenly;
+  }
+
   .title{
     width: 30%;
     font-family: 'Comfortaa' !important;
