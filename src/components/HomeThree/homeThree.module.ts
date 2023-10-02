@@ -2,13 +2,10 @@ import * as THREE from "three";
 // import gsap from "gsap";
 // import GUI from "lil-gui";
 
-console.log("Three.js");
-
-
 // Reload to top of page
-window.onload = function() {
+window.onload = function () {
   document.location.hash = "";
-}
+};
 
 // Setup
 THREE.ColorManagement.enabled = false;
@@ -24,19 +21,9 @@ THREE.ColorManagement.enabled = false;
 
 // Loaders
 const textureLoader = new THREE.TextureLoader();
-// const texture1 = textureLoader.load("textures/1.jpg");
-// const texture2 = textureLoader.load("textures/2.jpg");
-// const texture3 = textureLoader.load("textures/3.jpg");
 const texture4 = textureLoader.load("textures/4.jpg");
-// const texture5 = textureLoader.load("textures/5.jpg");
 const texture6 = textureLoader.load("textures/6.jpg");
-// const texture7 = textureLoader.load("textures/7.jpg");
-// const texture8 = textureLoader.load("textures/8.jpg");
-// const texture9 = textureLoader.load("textures/9.jpg");
-// const texture10 = textureLoader.load("textures/10.jpg");
-// const texture11 = textureLoader.load("textures/11.jpg");
 const texture12 = textureLoader.load("textures/12.jpg");
-// const texture13 = textureLoader.load("textures/13.jpg");
 
 const aplhaTexture = textureLoader.load("textures/alpha/tileAlpha.png");
 
@@ -70,14 +57,14 @@ window.addEventListener("resize", () => {
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 const directionalLight = new THREE.DirectionalLight(0xffffff, 10);
-const directionalLightHelper = new THREE.DirectionalLightHelper(
-  directionalLight,
-  10,
-  0xfff
-);
+// const directionalLightHelper = new THREE.DirectionalLightHelper(
+//   directionalLight,
+//   10,
+//   0xfff
+// );
 directionalLight.position.set(0, 6, 6);
 directionalLight.target.position.set(0, 0, 0);
-scene.add(directionalLight, directionalLightHelper);
+scene.add(directionalLight);
 
 // Slides
 const slide1 = new THREE.Mesh(
@@ -184,10 +171,6 @@ const tickFunction = () => {
   cameraGroup.position.y +=
     (parallaxY - cameraGroup.position.y) * 10 * deltaTime;
 
-  // Render
-  renderer.render(scene, camera);
-  window.requestAnimationFrame(tickFunction);
-
   // Slide 2 Movement
   slide2.rotation.x = Math.sin(elapsedTime) / 100;
   slide2.rotation.y = Math.sin(elapsedTime) / 100;
@@ -201,14 +184,6 @@ const tickFunction = () => {
   // cameraGroup.rotation.y = cursor.x / 10;
 
   scrollY = window.scrollY;
-
-  var currentScroll = (scrollY / docHeight) * 100;
-
-  if (document.getElementById("progress") != null) {
-    document
-      .getElementById("progress")!
-      .setAttribute("style", `height: ${currentScroll}%`);
-  }
 
   const newSection = Math.round(scrollY / sizes.height);
 
@@ -272,6 +247,9 @@ const tickFunction = () => {
     scene.add(slide3);
     console.log("Slide 1, 2, 3 added");
   }
+  // Render
+  renderer.render(scene, camera);
+  window.requestAnimationFrame(tickFunction);
 };
 
 tickFunction();
