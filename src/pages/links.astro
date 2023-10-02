@@ -1,13 +1,20 @@
 ---
 import HomeLayout from "../Layouts/DefaultLayout.astro";
+
+import Button from "../components/Button/button.astro";
 ---
 
 <HomeLayout>
   <section>
-    
+    <div class="container">
+      <Button title="Instagram" icon="mdi:instagram" />
+      <Button title="LinkedIn" icon="mdi:linkedin" />
+      <Button title="Github" icon="mdi:github" />
+      <!-- <Button title="LinkedIn" icon="mdi:linkedin" /> -->
+    </div>
   </section>
 </HomeLayout>
 
 <style lang="scss">
-  @import "../scss/section.module.scss";
+  @import "../scss/links.module.scss";
 </style>
