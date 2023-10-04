@@ -71,6 +71,8 @@
       display: flex;
       justify-content: center;
 
+      pointer-events: all;
+
       div {
         position: absolute;
         top: 50%;
@@ -102,6 +104,8 @@
 
       display: flex;
       justify-content: center;
+
+      pointer-events: all;
 
       .right-overlay {
         z-index: -1;
